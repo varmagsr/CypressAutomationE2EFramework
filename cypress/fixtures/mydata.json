@@ -1,0 +1,7 @@
+{
+  "name" : "Rams",
+  "email": "testing123@pipa.com",
+  "pwd": "Pass123456",
+  "gender": "Female",
+  "productName": ["Blackberry", "Nokia Edge", "Samsung Note 8", "iphone X" ]
+}
