@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import HomePage from '../pageObjects/HomePage'
+import HomePage from '../../support/pageObjects/HomePage'
 
 
 describe('this the 5rd test suite to handel hooks,', function(){
@@ -15,7 +15,7 @@ describe('this the 5rd test suite to handel hooks,', function(){
 
     it('this wil be the 1st test case in 5th suite for handling Hooks & Fixures ', function(){
         const homePage = new HomePage()
-        cy.visit("https://rahulshettyacademy.com/angularpractice/")
+        cy.visit(Cypress.env('QAUrl'))
         homePage.getNameEditBox().type(this.data.name)
         homePage.getEmailEditBox().type(this.data.email)
         homePage.getPasswordEditBox().type(this.data.pwd)
@@ -29,15 +29,15 @@ describe('this the 5rd test suite to handel hooks,', function(){
 
     it('this wil be the 2nd test case in 5th suite for handling parameters validation ', function(){
         const homePage = new HomePage()
-        cy.visit("https://rahulshettyacademy.com/angularpractice/")
+        cy.visit(Cypress.env('QAUrl'))
        homePage.getNameEditBox().type(this.data.name)
        homePage.getNameReflaction().should('have.value',this.data.name) 
        homePage.getNameEditBox().should('have.attr','minlength','2')
         homePage.getDisabledRadioButton().should('be.disabled')
     })   
 
-    it('this wil be the 2nd test case in 5th suite for handling custom commands', function(){
-        cy.visit("https://rahulshettyacademy.com/angularpractice/shop")
+    it('this wil be the 3rd test case in 5th suite for handling custom commands', function(){
+        cy.visit(Cypress.env('QAUrl')+"/shop")     // Url Concatination 
         this.data.productName.forEach(function(element){
             cy.selectProduct(element)
         }) 
