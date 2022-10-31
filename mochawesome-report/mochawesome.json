@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-10-31T20:50:24.671Z",
+    "end": "2022-10-31T20:50:34.968Z",
+    "duration": 10297,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2410b380-35f5-4cbf-aa0a-03b019092454",
+      "title": "",
+      "fullFile": "cypress/integration/UI/TestFramework1.js",
+      "file": "cypress/integration/UI/TestFramework1.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8ef3b853-989d-47aa-9743-4ba3f3685e3f",
+          "title": "this the 5rd test suite to handel hooks,",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "this wil be the 1st test case in 5th suite for handling Hooks & Fixures ",
+              "fullTitle": "this the 5rd test suite to handel hooks, this wil be the 1st test case in 5th suite for handling Hooks & Fixures ",
+              "timedOut": null,
+              "duration": 5641,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const homePage = new _HomePage.default();\ncy.visit(Cypress.env('QAUrl'));\nhomePage.getNameEditBox().type(this.data.name);\nhomePage.getEmailEditBox().type(this.data.email);\nhomePage.getPasswordEditBox().type(this.data.pwd);\nhomePage.getIcecreamCheckBox().check();\nhomePage.getGenderEditBox().select(this.data.gender);\nhomePage.getEmploymentStatus().check();\nhomePage.getShopPage().click(); //cy.get(':nth-child(8) > .form-control').click().type('12/14/2000')",
+              "err": {},
+              "uuid": "090fa86c-5485-4b78-ae00-3b1ae8e1671d",
+              "parentUUID": "8ef3b853-989d-47aa-9743-4ba3f3685e3f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "this wil be the 2nd test case in 5th suite for handling parameters validation ",
+              "fullTitle": "this the 5rd test suite to handel hooks, this wil be the 2nd test case in 5th suite for handling parameters validation ",
+              "timedOut": null,
+              "duration": 847,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const homePage = new _HomePage.default();\ncy.visit(Cypress.env('QAUrl'));\nhomePage.getNameEditBox().type(this.data.name);\nhomePage.getNameReflaction().should('have.value', this.data.name);\nhomePage.getNameEditBox().should('have.attr', 'minlength', '2');\nhomePage.getDisabledRadioButton().should('be.disabled');",
+              "err": {},
+              "uuid": "eefb4046-fa99-4eed-90df-904ab1b63c58",
+              "parentUUID": "8ef3b853-989d-47aa-9743-4ba3f3685e3f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "this wil be the 3rd test case in 5th suite for handling custom commands",
+              "fullTitle": "this the 5rd test suite to handel hooks, this wil be the 3rd test case in 5th suite for handling custom commands",
+              "timedOut": null,
+              "duration": 1281,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('QAUrl') + \"/shop\"); // Url Concatination \nthis.data.productName.forEach(function (element) {\n  cy.selectProduct(element);\n});",
+              "err": {},
+              "uuid": "33127971-a33f-4a09-87bd-221d86c52afa",
+              "parentUUID": "8ef3b853-989d-47aa-9743-4ba3f3685e3f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "090fa86c-5485-4b78-ae00-3b1ae8e1671d",
+            "eefb4046-fa99-4eed-90df-904ab1b63c58",
+            "33127971-a33f-4a09-87bd-221d86c52afa"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7769,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
