@@ -7,7 +7,7 @@
     "test": "node_modules//.bin//cypress run",
     "headTest": "npm run test -- --headed",
     "chromeTest": "npm run test -- --browser chrome --parallel",
-    "recordDashBoardTest": "npm run test -- --record --key 51ca3b9c-3b98-408a-a4f9-4a13a591ec006 --reporter mochawesome"
+    "recordDashBoardTest": "npm run test -- --record --key 51ca3b9c-3b98-408a-a4f9-4a13a591ec06 --reporter mochawesome"
 
   },
   "author": "GS Rajesh Varma",
