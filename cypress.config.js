@@ -7,8 +7,7 @@ module.exports = defineConfig({
       // implement node event listeners here
       on('file:preprocessor', cucumber())
     },
-    //specPattern: ['cypress/integration/UI/*.js','cypress/integration/GroupOfTests/*.js'],
-    specPattern: 'cypress/integration/BDD/*.feature',
+    specPattern: ['cypress/integration/UI/*.js','cypress/integration/GroupOfTests/*.js','cypress/integration/BDD/*.feature'],
     screenshotOnRunFailure: true,
     screenshotsFolder: 'cypress/screenshots',
     defaultCommandTimeout: 6000,
