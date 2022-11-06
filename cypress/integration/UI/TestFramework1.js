@@ -41,6 +41,8 @@ describe('this the 5rd test suite to handel hooks,', function(){
         this.data.productName.forEach(function(element){
             cy.selectProduct(element)
         }) 
+        cy.get('#navbarResponsive > .navbar-nav > .nav-item > .nav-link').click()
+        cy.contains('600000')
     })   
 
 })
