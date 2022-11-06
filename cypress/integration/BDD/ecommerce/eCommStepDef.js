@@ -27,18 +27,19 @@ Then('select the country submit and verify Thankyou msg', function(){
 
 
 
-When('I fill the form details', function(){
-    homePage.getNameEditBox().type(this.data.name)
+When('I fill the form details', function(dataTable){
+
+    homePage.getNameEditBox().type(dataTable.rawTable[1][0])
     homePage.getEmailEditBox().type(this.data.email)
     homePage.getPasswordEditBox().type(this.data.pwd)
     homePage.getIcecreamCheckBox().check()
-    homePage.getGenderEditBox().select(this.data.gender)
+    homePage.getGenderEditBox().select(dataTable.rawTable[1][1])
     homePage.getEmploymentStatus().check()
 
 }) 
-Then('Validate the form behaviour', function(){
+Then('Validate the form behaviour', function(dataTable){
    
-    homePage.getNameReflaction().should('have.value',this.data.name) 
+    homePage.getNameReflaction().should('have.value',dataTable.rawTable[1][0]) 
     homePage.getNameEditBox().should('have.attr','minlength','2')
 
 }) 
