@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
-    "passes": 0,
-    "pending": 0,
-    "failures": 1,
-    "start": "2022-11-06T04:31:34.860Z",
-    "end": "2022-11-06T04:31:41.511Z",
-    "duration": 6651,
-    "testsRegistered": 1,
-    "passPercent": 0,
-    "pendingPercent": 0,
+    "tests": 2,
+    "passes": 1,
+    "pending": 1,
+    "failures": 0,
+    "start": "2022-11-07T16:09:10.981Z",
+    "end": "2022-11-07T16:09:19.255Z",
+    "duration": 8274,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 50,
     "other": 0,
     "hasOther": false,
-    "skipped": 0,
-    "hasSkipped": false
+    "skipped": 1,
+    "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "0f8c1d5d-3079-4dbb-b39d-846a9f8fdba8",
+      "uuid": "47082c6a-1e26-48b1-884e-d4b013d69c2f",
       "title": "",
       "fullFile": "cypress/integration/BDD/ecommerce.feature",
       "file": "cypress/integration/BDD/ecommerce.feature",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "2595eb4a-89f3-434c-87cd-a6f871613d93",
+          "uuid": "6593a801-4c63-4e11-a0fe-30daa40ee4cf",
           "title": "End to End Ecommerce Validation",
           "fullFile": "",
           "file": "",
@@ -38,33 +38,49 @@
               "title": "Ecommerce Product delivery",
               "fullTitle": "End to End Ecommerce Validation Ecommerce Product delivery",
               "timedOut": null,
-              "duration": 972,
-              "state": "failed",
+              "duration": 41,
+              "state": "pending",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// register this scenario with the cucumber data collector\n// but don't run it\n// Tell mocha this is a skipped test so it also shows correctly in Cypress\nconst state = window.testState;\ncy.then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() => state.onFinishScenario(scenario))\n  // eslint-disable-next-line func-names\n  .then(function () {\n    return this.skip();\n  });",
+              "err": {},
+              "uuid": "36ac3084-c287-41ac-8765-3731cfc22a8a",
+              "parentUUID": "6593a801-4c63-4e11-a0fe-30daa40ee4cf",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Filling the form to shop",
+              "fullTitle": "End to End Ecommerce Validation Filling the form to shop",
+              "timedOut": null,
+              "duration": 5251,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
-              "err": {
-                "message": "Error: Step implementation missing for: I add items to cart",
-                "estack": "Error: Step implementation missing for: I add items to cart\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:199:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)",
-                "diff": null
-              },
-              "uuid": "655b0cff-f0b5-4b9b-9170-b5debc9a11e0",
-              "parentUUID": "2595eb4a-89f3-434c-87cd-a6f871613d93",
+              "err": {},
+              "uuid": "37b0dcde-fb65-4da7-97ab-127186b86b7e",
+              "parentUUID": "6593a801-4c63-4e11-a0fe-30daa40ee4cf",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "655b0cff-f0b5-4b9b-9170-b5debc9a11e0"
+          "passes": [
+            "37b0dcde-fb65-4da7-97ab-127186b86b7e"
           ],
+          "failures": [],
           "pending": [],
-          "skipped": [],
-          "duration": 972,
+          "skipped": [
+            "36ac3084-c287-41ac-8765-3731cfc22a8a"
+          ],
+          "duration": 5292,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
